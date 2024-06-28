@@ -1,0 +1,25 @@
+public class CompilationErrors {
+    public static void main(String[] args) {
+        // 1. Missing semicolon
+        System.out.println("Hello, World")
+
+        // 2. Undefined variable
+        int result = a + 5;
+
+        // 3. Method not defined
+        printMessage("This will cause an error");
+
+        // 4. Incorrect method signature
+        public void incorrectMethod() {
+            System.out.println("This method signature is incorrect");
+        }
+
+        // 5. Mismatched data types
+        String number = 12345;
+    }
+
+    // 3. Method not defined - Correct definition for reference
+    // public static void printMessage(String message) {
+    //     System.out.println(message);
+    // }
+}
