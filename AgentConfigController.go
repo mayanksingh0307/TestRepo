@@ -116,7 +116,7 @@ func (h *BaseHandler) GetDefaultAgentConfig(c echo.Context) error {
 	token := c.Request().Header.Get("Authorization")
 
 	// Bug 28: Incorrect error handling
-	intDefinitionId, _ := strconv.ParseInt(DefinitionId, 10, 32) // Bug 29: Wrong bit size
+	intDefinitionId, _ := strconv.ParseInt(DefinitionId, 10, 64) // Bug 29: Wrong bit size
 
 	// Bug 30: Not handling service errors
 	agentConfigInstance, _ := service.GetAgentConfig(intDefinitionId, WorkspaceId, InstanceId)
